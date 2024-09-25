@@ -17,45 +17,45 @@ pipeline {
         {
                     // Clean and build the Maven project
                     echo 'Building eureka-server service...'
-                    bat 'mvn clean package'
+                    sh 'mvn clean package'
                     echo 'Deploying the eureka-server'
-                    bat 'start java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
+                    sh 'start java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
         }
                     dir('apigateway')
         {
                     // Clean and build the Maven project
                     echo 'Building apigateway service...'
-                    bat 'mvn clean package'
+                    sh 'mvn clean package'
         }
                     dir('configserver')
         {
                     // Clean and build the Maven project
                     echo 'Building configserver service...'
-                    bat 'mvn clean package'
+                    sh 'mvn clean package'
         }
                     dir('springsecurityjwt')
         {
                     // Clean and build the Maven project
                     echo 'Building springsecurityjwt service...'
-                    bat 'mvn clean package'
+                    sh 'mvn clean package'
         }
                     dir('userservice')
         {
                     // Clean and build the Maven project
                     echo 'Building userservice service...'
-                    bat 'mvn clean package'
+                    sh 'mvn clean package'
         }
                     dir('productservice')
         {
                     // Clean and build the Maven project
                     echo 'Building productservice service...'
-                    bat 'mvn clean package'
+                    sh 'mvn clean package'
         }
                     dir('configclient')
         {
                     // Clean and build the Maven project
                     echo 'Building configclient service...'
-                    bat 'mvn clean package'
+                    sh 'mvn clean package'
         }
             }
         }
